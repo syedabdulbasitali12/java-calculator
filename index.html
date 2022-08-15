@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+    body{
+        font-size: 15px;
+        background-color: rgb(211, 210, 205)
+    }
+    .flex-container {
+      display: flex;
+      height: 50px;
+      text-align: center;
+
+    }
+    
+    .flex-container > div {
+      margin: 15px;
+      padding: 50px;
+      font-size: 50px;
+    }
+    </style>
+<body>
+    <h1><u><i><b><center>"CALCULATOR"</center></b></i></u></h1><hr><hr><br><br><br><br><br>
+    <div class="flex-container" >
+    <div1 style="flex-grow: 3">
+    <form onsubmit="dosum(); return false">
+        Num1: <input id ="num1" type="number">
+        <br><br>
+        Num2: <input id ="num2" type="number">
+        <br><br>
+        <button type="submit">ADDITION</button>
+    </form><br>
+    <button style="width: 300px; background-color: bisque; border: bisque;"><h3 id="result" style="height: 20px;">Answer</h3></button><br><br><br><br><br>
+
+    <form onsubmit="dosubtract(); return false">
+        Num1: <input id ="number1" type="number">
+        <br><br>
+        Num2: <input id ="number2" type="number">
+        <br><br>
+        <button type="submit">SUBTRACTION</button>
+    </form><br>
+    <button style="width: 300px; background-color: bisque; border: bisque;"><h3 id="calculate" style="height: 20px;">Answer</h3></button><br>
+    <br><br><br><hr><hr>
+    </div1>
+    <div2 style="flex-grow: 7">
+    <form onsubmit="domultiply(); return false">
+        Num1: <input id ="no1" type="number">
+        <br><br>
+        Num2: <input id ="no2" type="number">
+        <br><br>
+        <button type="submit">MULTIPLICATION</button>
+    </form><br>
+    <button style="width: 300px; background-color: bisque; border: bisque;"><h3 id="equal" style="height: 20px;">Answer</h3></button><br><br><br><br><br>
+
+    <form onsubmit="dodivide(); return false">
+        Num1: <input id ="n1" type="number">
+        <br><br>
+        Num2: <input id ="n2" type="number">
+        <br><br>
+        <button type="submit">DIVISION</button>
+    </form><br>
+    <button style="width: 300px; background-color: bisque; border: bisque;"><h3 id="answer" style="height: 20px;">Answer</h3></button><br><br>
+    <br><br><hr><hr>
+    </div2>
+    </div>
+    <script>
+
+        function dosum()
+        {
+            let firstnumber = Number(document.querySelector("#num1").value)
+            let secondnumber = +document.querySelector("#num2").value
+            console.log(firstnumber,secondnumber);
+            let sum = firstnumber + secondnumber;
+            document.querySelector("#result").innerHTML = sum;
+        }
+
+        function dosubtract()
+        {
+            let firstnumber = Number(document.querySelector("#number1").value)
+            let secondnumber = document.querySelector("#number2").value
+            console.log(firstnumber,secondnumber);
+            let subtract = firstnumber - secondnumber;
+            document.querySelector("#calculate").innerHTML = subtract;
+        }
+
+        function domultiply()
+        {
+            let firstnumber = Number(document.querySelector("#no1").value)
+            let secondnumber = document.querySelector("#no2").value
+            console.log(firstnumber,secondnumber);
+            let multiply = firstnumber * secondnumber;
+            document.querySelector("#equal").innerHTML = multiply;
+        }
+
+        function dodivide()
+        {
+            let firstnumber = Number(document.querySelector("#n1").value)
+            let secondnumber = document.querySelector("#n2").value
+            console.log(firstnumber,secondnumber);
+            let divide = firstnumber / secondnumber;
+            document.querySelector("#answer").innerHTML = divide;
+        }
+    </script>
+</body>
+</html>
